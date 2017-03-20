@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Valerii_Fludkov on 3/19/2017.
  */
-public class FirstTest {
+public class FirstTests {
 
     public WebDriver driver;
 
@@ -48,7 +48,7 @@ public class FirstTest {
     }
 
     @Test
-    public void test123() throws InterruptedException {
+    public void testAddingItemToCard() throws InterruptedException {
         System.out.println("TEST!!!111");
         String parentWindowHandle = driver.getWindowHandle();
         WebElement cityOkButton = driver.findElement(By.id("cityOk"));
@@ -81,6 +81,7 @@ public class FirstTest {
         driver.findElement(By.xpath("//a[@id=\"addToCart_btn\"]")).click();
         String bodyText2 = driver.findElement(By.tagName("body")).getText();
         Assert.assertTrue(bodyText2.contains("Товар добавлен в корзину!"));
+        assert
     }
 
 }
