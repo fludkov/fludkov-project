@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage{
     private static final String pageUrl = "http://www.ulmart.ru";
+    private static final By cityOkButton = By.id("cityOk");
     private final NavigationMenu navigationMenu;
     private WebDriver driver;
 
@@ -17,6 +18,11 @@ public class HomePage{
 
     public HomePage open() {
         driver.get(pageUrl);
+        return this;
+    }
+
+    public HomePage submitCity() {
+        driver.findElement(cityOkButton).click();
         return this;
     }
 
