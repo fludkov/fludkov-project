@@ -3,13 +3,12 @@ package com.github.fludkov.automation.edu.support;
 import com.github.fludkov.automation.edu.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 import java.io.IOException;
-import java.net.URL;
+import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -51,6 +50,11 @@ public class BaseTest {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod () {
         homePage = new HomePage(driver).open();
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDownMethod() {
+        //driver.close();
     }
 
     @AfterClass(alwaysRun = true)

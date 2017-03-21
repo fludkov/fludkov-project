@@ -1,0 +1,31 @@
+<suite name="Suite">
+ 
+   <test name="Practice Grouping">
+ 
+      <groups>
+ 
+         <define name="All">
+ 
+   <include name="Cart Page"/>
+ 
+   <include name="Product Page"/>
+ 
+</define>
+ 
+<run>
+ 
+   <include name="All"/>
+ 
+</run>
+ 
+   </groups>
+ 
+<classes>
+ 
+      <class name="com.github.fludkov.automation.edu.tests.FirstTests" />
+ 
+</classes>
+ 
+   </test>
+ 
+</suite>

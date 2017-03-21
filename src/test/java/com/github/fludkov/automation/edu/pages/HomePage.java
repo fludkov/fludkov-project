@@ -25,7 +25,8 @@ public class HomePage{
 
     public HomePage submitCity() {
         BaseTest.logger.info("Confrim that your pre-selected city is ok");
-        driver.findElement(cityOkButton).click();
+        if (driver.findElements( cityOkButton ).size() != 0) {
+        driver.findElement(cityOkButton).click();}
         return this;
     }
 

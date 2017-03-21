@@ -1,2 +1,0 @@
-Mar 21, 2017 2:03:22 PM com.github.fludkov.automation.edu.pages.HomePage open
-INFO: !!!Open url page: https://www.ulmart.ru

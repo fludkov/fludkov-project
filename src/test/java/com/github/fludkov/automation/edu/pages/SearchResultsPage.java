@@ -42,11 +42,14 @@ public class SearchResultsPage {
     }
 
     public SearchResultsPage closeAdvertiseFrame() throws InterruptedException {
-        BaseTest.logger.info("Close Advertise Frame");
-        wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[@class=\"sp-fancybox-iframe\"]")));
-        driver.findElement(By.xpath("//i[contains(@id, \"icon-close-button\")]")).click();
-        Thread.sleep(2000);
+        try {
+            driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class=\"sp-fancybox-iframe\"]")));
+            BaseTest.logger.info("Close Advertise Frame");
+            driver.findElement(By.xpath("//i[contains(@id, \"icon-close-button\")]")).click();
+            Thread.sleep(2000);
+        } catch (NoSuchElementException e) {
+            BaseTest.logger.info("Advertise Frame is not displayed");
+            }
         return this;
     }
 }
