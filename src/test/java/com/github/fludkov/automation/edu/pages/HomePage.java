@@ -1,9 +1,9 @@
 package com.github.fludkov.automation.edu.pages;
 
+import com.github.fludkov.automation.edu.support.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.github.fludkov.automation.edu.components.NavigationMenu;
-import org.openqa.selenium.WebElement;
 
 public class HomePage{
     private static final String pageUrl = "https://www.ulmart.ru";
@@ -17,11 +17,14 @@ public class HomePage{
     }
 
     public HomePage open() {
+        BaseTest.logger.info("Open url page: " + pageUrl);
         driver.get(pageUrl);
+        driver.manage().window().maximize();
         return this;
     }
 
     public HomePage submitCity() {
+        BaseTest.logger.info("Confrim that your pre-selected city is ok");
         driver.findElement(cityOkButton).click();
         return this;
     }
@@ -30,7 +33,3 @@ public class HomePage{
         return navigationMenu;
     }
 }
-
-
-
-

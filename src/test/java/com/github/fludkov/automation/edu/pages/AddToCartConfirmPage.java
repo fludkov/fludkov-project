@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AddToCartConfirmPage {
-    private static final By confirmTextField = By.xpath("confirm-text");
+    private static final By body = By.xpath("//div[@class=\"main-h1 main-h1_bold\"]");
     private final NavigationMenu navigationMenu;
     private WebDriver driver;
 
@@ -15,8 +15,8 @@ public class AddToCartConfirmPage {
     }
 
     public String getConfirmationText() {
-        return driver.findElement(confirmTextField)
-                .getText();
+        String confirmTextField = driver.findElement(body).getText();
+        return confirmTextField;
     }
 
     public NavigationMenu navigationMenu() {

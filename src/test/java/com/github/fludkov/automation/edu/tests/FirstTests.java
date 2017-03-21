@@ -4,72 +4,28 @@ import com.github.fludkov.automation.edu.pages.AddToCartConfirmPage;
 import com.github.fludkov.automation.edu.pages.HomePage;
 import com.github.fludkov.automation.edu.pages.ProductDetailsPage;
 import com.github.fludkov.automation.edu.pages.SearchResultsPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.github.fludkov.automation.edu.support.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
+import java.util.Date;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
-public class FirstTests {
-
-    private WebDriver driver;
-    private HomePage homePage;
-
-    @BeforeClass(alwaysRun = true)
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Web Drivers\\chromedriver.exe");
-        driver= new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
-
-    @BeforeMethod(alwaysRun = true)
-    public void beforeMethod () {
-        homePage = new HomePage(driver).open();
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void tearDown() {
-        driver.quit();
-    }
+public class FirstTests extends BaseTest {
 
     @Test
     public void testAddingItemToCard() throws InterruptedException {
+        HomePage homePage = new HomePage(this.driver);
         homePage.submitCity();
         SearchResultsPage searchResultsPage = homePage.navigationMenu().searchFor("Везде","Iphone 6");
-        searchResultsPage.submitAdvertiseFrame();
+        searchResultsPage.closeAdvertiseFrame();
+        Assert.assertTrue(searchResultsPage.getFirstResultTitle().contains("Apple iPhone"));
         ProductDetailsPage productDetailsPage = searchResultsPage.clickFirstResultTitle();
-        AddToCartConfirmPage addToCartConfirmPage = productDetailsPage.addToCart();
-        Thread.sleep(99999);
-        /*
-        //Assert.assertTrue(searchResultsPage.getFirstResultTitle().contains("Apple iPhone"));
-
         Assert.assertTrue(productDetailsPage.getProductTitle().contains("Apple iPhone"));
         AddToCartConfirmPage addToCartConfirmPage = productDetailsPage.addToCart();
-        //Assert.assertEquals(productDetailsPage.getProductTitle(), "Защитное стекло Onext для Apple iPhone 4/4S");
-
-
-
-        String parentWindowHandle = driver.getWindowHandle();
-        WebElement cityOkButton = driver.findElement(By.id("cityOk"));
-        cityOkButton.click();
-        WebElement searchField = driver.findElement(By.id("searchField"));
-        searchField.sendKeys("Iphone 6s");
-        WebElement mainSearchButton = driver.findElement(By.id("mainSearchButton"));
-        mainSearchButton.click();
-
-
-        driver.findElement(By.xpath("//a[@id=\"addToCart_btn\"]")).click();
-        String bodyText2 = driver.findElement(By.tagName("body")).getText();
-        Assert.assertTrue(bodyText2.contains("Товар добавлен в корзину!"));
-        assert
-        */
+        Assert.assertEquals(addToCartConfirmPage.getConfirmationText(), "Товар добавлен в корзину!");
     }
-
 }
