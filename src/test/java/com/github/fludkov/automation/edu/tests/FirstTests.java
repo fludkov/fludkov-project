@@ -42,16 +42,19 @@ public class FirstTests {
     @Test
     public void testAddingItemToCard() throws InterruptedException {
         homePage.submitCity();
-        SearchResultsPage searchResultsPage = homePage.navigationMenu().searchFor("Везде","jbl pulse 2");
+        SearchResultsPage searchResultsPage = homePage.navigationMenu().searchFor("Везде","Iphone 6");
         searchResultsPage.submitAdvertiseFrame();
-        //Thread.sleep(99999);
-        //Assert.assertTrue(searchResultsPage.getFirstResultTitle().contains("Apple iPhone"));
         ProductDetailsPage productDetailsPage = searchResultsPage.clickFirstResultTitle();
+        AddToCartConfirmPage addToCartConfirmPage = productDetailsPage.addToCart();
+        Thread.sleep(99999);
+        /*
+        //Assert.assertTrue(searchResultsPage.getFirstResultTitle().contains("Apple iPhone"));
+
         Assert.assertTrue(productDetailsPage.getProductTitle().contains("Apple iPhone"));
         AddToCartConfirmPage addToCartConfirmPage = productDetailsPage.addToCart();
         //Assert.assertEquals(productDetailsPage.getProductTitle(), "Защитное стекло Onext для Apple iPhone 4/4S");
-        Thread.sleep(99999);
-        /*
+
+
 
         String parentWindowHandle = driver.getWindowHandle();
         WebElement cityOkButton = driver.findElement(By.id("cityOk"));
