@@ -1,0 +1,9 @@
+com\github\fludkov\automation\edu\pages\AddToCartConfirmPage.class
+com\github\fludkov\automation\edu\pages\SearchResultsPage.class
+com\github\fludkov\automation\edu\support\BaseTest.class
+com\github\fludkov\automation\edu\pages\HomePage.class
+com\github\fludkov\automation\edu\components\NavigationMenu.class
+com\github\fludkov\automation\edu\pages\CartPage.class
+com\github\fludkov\automation\edu\support\ExcelReader.class
+com\github\fludkov\automation\edu\tests\FirstTests.class
+com\github\fludkov\automation\edu\pages\ProductDetailsPage.class

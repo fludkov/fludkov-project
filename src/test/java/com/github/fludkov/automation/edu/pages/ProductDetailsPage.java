@@ -1,6 +1,6 @@
 package com.github.fludkov.automation.edu.pages;
 
-import com.github.fludkov.automation.edu.support.BaseTest;
+//import com.github.fludkov.automation.edu.support.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,7 +22,7 @@ public class ProductDetailsPage {
     }
 
     public AddToCartConfirmPage addToCart() {
-        BaseTest.logger.info("Add item to cart");
+        //BaseTest.logger.info("Add item to cart");
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
         driver.findElement(addToCartButton)
@@ -31,7 +31,7 @@ public class ProductDetailsPage {
     }
 
     public CartPage goToCart() {
-        BaseTest.logger.info("Go to the cart from product page item to cart");
+        //BaseTest.logger.info("Go to the cart from product page item to cart");
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.elementToBeClickable(goToCartButton));
         driver.findElement(goToCartButton)

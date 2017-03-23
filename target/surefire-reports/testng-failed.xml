@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Practice Grouping(failed)" preserve-order="false">
+    <groups>
+      <run>
+        <include name="All"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.github.fludkov.automation.edu.tests.FirstTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeMethod"/>
+          <include name="tearDownMethod"/>
+          <include name="testAddingItemToCart1"/>
+          <include name="testItemIsInCart1"/>
+          <include name="setUp"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

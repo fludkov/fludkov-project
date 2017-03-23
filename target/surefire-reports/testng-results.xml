@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="1" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="34947" started-at="2017-03-23T17:42:15Z" finished-at="2017-03-23T17:42:50Z">
+    <groups>
+      <group name="Cart Page">
+        <method signature="com.github.fludkov.automation.edu.tests.FirstTests.testAddingItemToCart1()" name="testAddingItemToCart1" class="com.github.fludkov.automation.edu.tests.FirstTests"/>
+        <method signature="com.github.fludkov.automation.edu.tests.FirstTests.testItemIsInCart1()" name="testItemIsInCart1" class="com.github.fludkov.automation.edu.tests.FirstTests"/>
+      </group>
+      <group name="Home Page">
+        <method signature="com.github.fludkov.automation.edu.tests.FirstTests.testHomeProductPage()" name="testHomeProductPage" class="com.github.fludkov.automation.edu.tests.FirstTests"/>
+      </group>
+      <group name="Product Page">
+        <method signature="com.github.fludkov.automation.edu.tests.FirstTests.testHomeProductPage()" name="testHomeProductPage" class="com.github.fludkov.automation.edu.tests.FirstTests"/>
+      </group>
+    </groups>
+    <test name="Practice Grouping" duration-ms="34947" started-at="2017-03-23T17:42:15Z" finished-at="2017-03-23T17:42:50Z">
+      <class name="com.github.fludkov.automation.edu.tests.FirstTests">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="3514" started-at="2017-03-23T17:42:15Z" finished-at="2017-03-23T17:42:18Z">
+        </test-method>
+        <test-method status="PASS" signature="beforeMethod()" name="beforeMethod" is-config="true" duration-ms="14949" started-at="2017-03-23T17:42:18Z" finished-at="2017-03-23T17:42:33Z">
+        </test-method>
+        <test-method status="FAIL" signature="testAddingItemToCart1()" name="testAddingItemToCart1" duration-ms="12627" started-at="2017-03-23T17:42:33Z" finished-at="2017-03-23T17:42:46Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id="catalogGoodsBlock"]//div[@class="b-product__title"]//a"}
+  (Session info: chrome=57.0.2987.98)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'EPRUPETW1319', ip: '10.16.9.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\VALERI~1\AppData\Local\Temp\scoped_dir8204_12889}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 371cc6f45bf43343fe169fbfe5ba8ca6
+*** Element info: {Using=xpath, value=//div[@id="catalogGoodsBlock"]//div[@class="b-product__title"]//a}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id="catalogGoodsBlock"]//div[@class="b-product__title"]//a"}
+  (Session info: chrome=57.0.2987.98)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'EPRUPETW1319', ip: '10.16.9.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\VALERI~1\AppData\Local\Temp\scoped_dir8204_12889}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 371cc6f45bf43343fe169fbfe5ba8ca6
+*** Element info: {Using=xpath, value=//div[@id="catalogGoodsBlock"]//div[@class="b-product__title"]//a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at com.github.fludkov.automation.edu.pages.SearchResultsPage.getFirstResultTitle(SearchResultsPage.java:22)
+	at com.github.fludkov.automation.edu.tests.FirstTests.testAddingItemToCart1(FirstTests.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:842)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1166)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1178)
+	at org.testng.TestRunner.privateRun(TestRunner.java:757)
+	at org.testng.TestRunner.run(TestRunner.java:608)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1158)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1083)
+	at org.testng.TestNG.run(TestNG.java:999)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+        <test-method status="PASS" signature="tearDownMethod()" name="tearDownMethod" is-config="true" duration-ms="22" started-at="2017-03-23T17:42:46Z" finished-at="2017-03-23T17:42:46Z">
+        </test-method>
+        <test-method status="SKIP" signature="testItemIsInCart1()" name="testItemIsInCart1" duration-ms="0" started-at="2017-03-23T17:42:46Z" depends-on-methods="com.github.fludkov.automation.edu.tests.FirstTests.testAddingItemToCart1" finished-at="2017-03-23T17:42:46Z">
+        </test-method>
+        <test-method status="PASS" signature="beforeMethod()" name="beforeMethod" is-config="true" duration-ms="2973" started-at="2017-03-23T17:42:46Z" finished-at="2017-03-23T17:42:49Z">
+        </test-method>
+        <test-method status="PASS" signature="testHomeProductPage()" name="testHomeProductPage" duration-ms="0" started-at="2017-03-23T17:42:49Z" finished-at="2017-03-23T17:42:49Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDownMethod()" name="tearDownMethod" is-config="true" duration-ms="11" started-at="2017-03-23T17:42:49Z" finished-at="2017-03-23T17:42:49Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="846" started-at="2017-03-23T17:42:49Z" finished-at="2017-03-23T17:42:50Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
